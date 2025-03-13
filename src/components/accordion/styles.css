@@ -7,16 +7,34 @@
 
 .accordion {
   background-color: rgb(163, 154, 154);
-  width: 500px;
+  width: 600px;
   border-radius: 10px;
 }
 
 .item {
   margin: 20px;
   padding: 10px 20px;
+  color: #ffffffff;
 }
 
 .title {
+  color: #ffffffff;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.span {
+  font-weight: 400;
+  font-size: 30px;
+  padding-top: 10px;
+}
+
+.button {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(180, 121, 121);
   color: #ffffffff;
   cursor: pointer;
 }
