@@ -1,5 +1,6 @@
 import Accordion from "./components/accordion";
 import RandomColor from "./components/random_color";
+import StarRating from "./components/star_rating";
 import styled from "styled-components";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Heading>React Projects for Practice</Heading>
       <Accordion />
       <RandomColor />
+      <StarRating />
     </div>
   );
 }
