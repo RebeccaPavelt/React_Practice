@@ -8,14 +8,13 @@ export default function StarRating() {
 
   function handleRating(currentIndex) {
     setRating(currentIndex + 1);
-    console.log(rating);
   }
   function handleMouseMove(currentIndex) {
-    console.log(currentIndex);
+    setHover(currentIndex + 1);
   }
 
-  function handleMouseLeave(currentIndex) {
-    console.log(currentIndex);
+  function handleMouseLeave() {
+    setHover(0);
   }
 
   return (
@@ -27,7 +26,8 @@ export default function StarRating() {
             key={index}
             onClick={() => handleRating(index)}
             onMouseMove={() => handleMouseMove(index)}
-            onMouseLeave={() => handleMouseLeave(index)}
+            onMouseLeave={handleMouseLeave}
+            isFilled={hover > index || rating > index}
           />
         ))}
       </StarContainer>
@@ -53,10 +53,11 @@ const StarContainer = styled.div`
 `;
 
 const Star = styled(FaStar)`
-  color: white;
+  color: ${({ isFilled }) => (isFilled ? "gold" : "white")};
   font-size: 60px;
   stroke: black;
   stroke-width: 3px;
+  cursor: pointer;
 
   &:hover {
     color: gold;
