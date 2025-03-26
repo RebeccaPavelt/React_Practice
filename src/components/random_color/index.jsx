@@ -5,7 +5,16 @@ export default function RandomColor() {
   const [color, setColor] = useState("#000000");
   const [typeOfColor, setTypeOfColor] = useState("hex");
 
-  function handleRandomColor() {}
+  function handleRandomColor() {
+    if (typeOfColor === "hex") {
+      const randomHexColor = `#${Math.floor(Math.random() * 16777215).toString(
+        16
+      )}`;
+      setColor(randomHexColor);
+    }
+    if (typeOfColor === "rgb") {
+    }
+  }
 
   return (
     <Container bgColor={color}>
