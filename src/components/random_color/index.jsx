@@ -10,9 +10,18 @@ export default function RandomColor() {
       const randomHexColor = `#${Math.floor(Math.random() * 16777215).toString(
         16
       )}`;
+
+      //16777215 = max. HexValue possible / to.String(16) = 16 (base) converts to hexidecimal
+
       setColor(randomHexColor);
     }
     if (typeOfColor === "rgb") {
+      const randomR = Math.floor(Math.random() * 255);
+      const randomG = Math.floor(Math.random() * 255);
+      const randomB = Math.floor(Math.random() * 255);
+      const randomRGBColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
+
+      setColor(randomRGBColor);
     }
   }
 
@@ -23,6 +32,8 @@ export default function RandomColor() {
         <Button onClick={handleRandomColor}>Get Random Color</Button>
         <Button onClick={() => setTypeOfColor("hex")}>HEX Color</Button>
         <Button onClick={() => setTypeOfColor("rgb")}>RGB Color</Button>
+
+        <StyledDiv>{color}</StyledDiv>
       </ButtonContainer>
     </Container>
   );
@@ -54,9 +65,19 @@ const Heading = styled.h3`
 const Button = styled.button`
   padding: 10px;
   border-radius: 5px;
-  background-color: #0f0a0a;
+  background-color: black;
   color: white;
   border: none;
   cursor: pointer;
   border: 1px solid white;
+`;
+
+const StyledDiv = styled.div`
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  font-weight: 100;
+  font-size: 30px;
+  padding: 10px;
+  margin-top: 30px;
 `;
