@@ -25,7 +25,7 @@ export default function Accordion() {
 
   return (
     <div className="wrapper">
-      <h2>ACCORDION</h2>
+      <h2 className="heading">ACCORDION</h2>
       <button type="button" className="button" onClick={toggleButton}>
         {enableMultiSelections
           ? "Enable Single Selection"

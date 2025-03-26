@@ -1,4 +1,5 @@
 import Accordion from "./components/accordion";
+import RandomColor from "./components/random_color";
 import styled from "styled-components";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div>
       <Heading>React Projects for Practice</Heading>
       <Accordion />
+      <RandomColor />
     </div>
   );
 }

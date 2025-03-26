@@ -5,6 +5,11 @@
   gap: 20px;
 }
 
+.heading {
+  font-size: 30px;
+  font-weight: 200;
+}
+
 .accordion {
   background-color: rgb(163, 154, 154);
   width: 600px;
