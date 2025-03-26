@@ -6,11 +6,9 @@ export default function StarRating() {
     <Container>
       <Heading>STAR RATING</Heading>
       <StarContainer>
-        <Star />
-        <Star />
-        <Star />
-        <Star />
-        <Star />
+        {[...Array(5)].map((_, index) => (
+          <Star key={index} />
+        ))}
       </StarContainer>
     </Container>
   );
@@ -38,4 +36,9 @@ const Star = styled(FaStar)`
   font-size: 60px;
   stroke: black;
   stroke-width: 3px;
+
+  &:hover {
+    color: gold;
+    stroke: gold;
+  }
 `;
